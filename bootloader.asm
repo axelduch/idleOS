@@ -46,7 +46,7 @@ setvideomode:
 	int 10h
 	ret
 
-drawat: ; color in ax, x position in cx, y position in dx
+drawat:			; color in ax, x position in cx, y position in dx
 	xor di, di	; We want to start from zero for x and y position computation
 	push 0A000h	; Video memory address
 	pop es
